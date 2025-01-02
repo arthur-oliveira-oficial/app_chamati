@@ -1,0 +1,148 @@
+/* Container principal */
+.chamado-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Card principal */
+.card {
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Badges de status */
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Descrição do problema */
+.descricao-box {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    margin-top: 0.5rem;
+}
+
+/* Timeline do histórico */
+.timeline {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #dee2e6;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: 0.35rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.timeline-content {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.timeline-content h6 {
+    margin: 0;
+    color: #333;
+}
+
+.timeline-content p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.timeline-content small {
+    color: #888;
+}
+
+/* Imagem anexada */
+.img-fluid {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+/* Botão voltar */
+.btn-outline-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .chamado-container {
+        margin: 1rem auto;
+    }
+
+    .card-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline::before {
+        left: 0.75rem;
+    }
+
+    .timeline-item {
+        padding-left: 2.5rem;
+    }
+
+    .timeline-badge {
+        left: 0.1rem;
+    }
+}

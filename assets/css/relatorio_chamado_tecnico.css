@@ -1,0 +1,208 @@
+/* Variáveis */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --white-color: #ffffff;
+    --shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --border-radius: 0.25rem;
+    --transition: all 0.3s ease;
+    --sidebar-width: 250px;
+    --sidebar-width-mobile: 60px;
+}
+
+/* Layout Base */
+body {
+    background-color: var(--light-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-wrapper {
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+/* Container do Relatório */
+.relatorio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: var(--white-color);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 1rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Tabela */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    border-top: none;
+    background-color: var(--light-color);
+    font-weight: 600;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Badges */
+.badge {
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+}
+
+/* Botões */
+.btn {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+/* Formulários */
+.form-control, .form-select {
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-wrapper {
+        margin-left: var(--sidebar-width-mobile);
+        padding: 1rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .table-responsive {
+        margin-bottom: 0;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Animações */
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+}
+
+/* Utilitários */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-light {
+    background-color: var(--light-color) !important;
+}
+
+/* Destaque para chamados em aberto */
+.table-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.table-warning:hover {
+    background-color: rgba(255, 193, 7, 0.2);
+}
+
+/* Botões de ação */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+.btn-sm i {
+    font-size: 0.875rem;
+}
+
+/* Ajuste para coluna de ações */
+.table td:last-child {
+    white-space: nowrap;
+    width: 1%;
+}
+
+/* Ajuste para cabeçalho da tabela */
+.table thead th {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    text-transform: none;
+    white-space: nowrap;
+    padding: 0.75rem;
+    vertical-align: middle;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Ajuste para células do corpo da tabela */
+.table tbody td {
+    font-size: 0.875rem;
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+/* Ajuste para responsividade da tabela */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Evitar quebra de linha nos títulos */
+.table th {
+    white-space: nowrap;
+}
+
+/* Ajuste específico para cada coluna */
+.table th:nth-child(1) { min-width: 120px; } /* Número OS */
+.table th:nth-child(2) { min-width: 100px; } /* Filial */
+.table th:nth-child(3) { min-width: 100px; } /* Setor */
+.table th:nth-child(4) { min-width: 120px; } /* Solicitante */
+.table th:nth-child(5) { min-width: 120px; } /* Técnico */
+.table th:nth-child(6) { min-width: 100px; } /* Prioridade */
+.table th:nth-child(7) { min-width: 100px; } /* Status */
+.table th:nth-child(8) { min-width: 140px; } /* Data Abertura */
+.table th:nth-child(9) { min-width: 140px; } /* Data Fechamento */

@@ -1,0 +1,113 @@
+/* Layout principal */
+.content-wrapper {
+    margin-left: 250px;
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+}
+
+/* Título da página */
+.page-title {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Cards de estatísticas */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+.card-header h5 {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Cards de estatísticas */
+.bg-primary {
+    background: linear-gradient(45deg, #3498db, #2980b9) !important;
+}
+
+.bg-warning {
+    background: linear-gradient(45deg, #f1c40f, #f39c12) !important;
+}
+
+.bg-info {
+    background: linear-gradient(45deg, #3498db, #2980b9) !important;
+}
+
+.bg-success {
+    background: linear-gradient(45deg, #2ecc71, #27ae60) !important;
+}
+
+/* Gráficos */
+canvas {
+    min-height: 300px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-wrapper {
+        margin-left: 60px;
+        padding: 1rem;
+    }
+
+    .row {
+        margin-right: -0.5rem;
+        margin-left: -0.5rem;
+    }
+
+    .col-md-3, .col-md-6 {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    canvas {
+        min-height: 200px;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .card-body h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-body h5 {
+        font-size: 1rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out;
+}

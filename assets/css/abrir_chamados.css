@@ -1,0 +1,162 @@
+/* Variáveis */
+:root {
+    --primary-color: #0056b3;
+    --text-color: #333333;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.125);
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --border-radius: 10px;
+    --shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Base - Mobile First */
+body {
+    background-color: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+.content-wrapper {
+    margin-left: 60px; /* Largura do sidebar mobile */
+    padding: var(--spacing-xs);
+    transition: margin-left 0.3s;
+}
+
+.chamado-form-container {
+    max-width: 100%;
+    margin: var(--spacing-sm) auto;
+    padding: var(--spacing-xs);
+}
+
+/* Card */
+.card {
+    box-shadow: var(--shadow);
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.card-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--spacing-sm);
+}
+
+.card-body {
+    padding: var(--spacing-sm);
+}
+
+/* Form Elements */
+.form-label {
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9rem;
+}
+
+.form-control,
+.form-select {
+    border-radius: 5px;
+    padding: var(--spacing-xs);
+    font-size: 0.9rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
+}
+
+/* Grid e Espaçamentos */
+.row {
+    margin-bottom: var(--spacing-xs);
+}
+
+.col-md-6 {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Alertas */
+.alert {
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.9rem;
+}
+
+/* Título */
+.chamado-form-container h2 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.chamado-form-container h2 i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .content-wrapper {
+        margin-left: 250px; /* Largura do sidebar desktop */
+        padding: var(--spacing-md);
+    }
+
+    .chamado-form-container {
+        max-width: 1200px;
+        padding: var(--spacing-md);
+        margin: var(--spacing-lg) auto;
+    }
+
+    .card-body {
+        padding: var(--spacing-lg);
+    }
+
+    .form-label {
+        font-size: 1rem;
+    }
+
+    .form-control,
+    .form-select {
+        font-size: 1rem;
+        padding: var(--spacing-sm);
+    }
+
+    .row {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .col-md-6 {
+        margin-bottom: 0;
+    }
+
+    .chamado-form-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .chamado-form-container h2 i {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.3s ease-out;
+}

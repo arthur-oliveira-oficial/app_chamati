@@ -1,0 +1,208 @@
+/* Variáveis */
+:root {
+    --primary-color: #3498db;
+    --warning-color: #f1c40f;
+    --info-color: #2980b9;
+    --success-color: #2ecc71;
+    --text-color: #000000;
+    --text-muted: #333333;
+    --card-bg: #ffffff;
+    --body-bg: #f8f9fa;
+    --border-radius: 10px;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --sidebar-width-mobile: 60px;
+    --sidebar-width-desktop: 250px;
+}
+
+/* Base */
+body {
+    background-color: var(--body-bg);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+/* Layout Principal */
+.dashboard {
+    padding-left: var(--sidebar-width-mobile);
+    transition: padding-left 0.3s ease;
+}
+
+/* Header */
+.dashboard__header {
+    padding: var(--spacing-sm);
+    background-color: var(--card-bg);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+    color: #333333;
+    font-weight: 600;
+}
+
+.dashboard__subtitle {
+    color: #333333;
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Cards de Estatísticas */
+.stats-grid {
+    margin-bottom: var(--spacing-md);
+}
+
+.stats-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.stats-card__icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff !important;
+}
+
+.stats-card__content {
+    flex: 1;
+}
+
+.stats-card__number {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #333333;
+}
+
+.stats-card__label {
+    font-size: 0.8rem;
+    color: #333333;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Variantes de Cards */
+.stats-card--primary .stats-card__icon { background-color: var(--primary-color); }
+.stats-card--warning .stats-card__icon { background-color: var(--warning-color); }
+.stats-card--info .stats-card__icon { background-color: var(--info-color); }
+.stats-card--success .stats-card__icon { background-color: var(--success-color); }
+
+/* Cards de Gráficos */
+.chart-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chart-card__header {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+.chart-card__title {
+    font-size: 1rem;
+    margin: 0;
+    color: #333333;
+    font-weight: 600;
+}
+
+.chart-card__body {
+    padding: var(--spacing-sm);
+    min-height: 200px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .dashboard {
+        padding-left: var(--sidebar-width-desktop);
+    }
+
+    .dashboard__header {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    .dashboard__title {
+        font-size: 2rem;
+        color: #333333;
+    }
+
+    .dashboard__subtitle {
+        font-size: 1rem;
+        color: #333333;
+    }
+
+    .stats-card {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .stats-card__icon {
+        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    .stats-card__number {
+        font-size: 1.5rem;
+        color: #333333;
+    }
+
+    .stats-card__label {
+        font-size: 0.9rem;
+        color: #333333;
+    }
+
+    .chart-card__body {
+        min-height: 300px;
+        padding: var(--spacing-md);
+    }
+
+    .chart-card__title {
+        font-size: 1.2rem;
+        color: #333333;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stats-card, .chart-card {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --card-bg: #ffffff;
+        --body-bg: #f8f9fa;
+        --text-color: #333333;
+        --text-muted: #333333;
+    }
+}

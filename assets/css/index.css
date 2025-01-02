@@ -1,0 +1,152 @@
+/* Variáveis CSS */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #212529;
+    --text-muted: #6c757d;
+    --border-radius: 0.5rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    min-height: 100vh;
+}
+
+/* Layout Principal */
+.login-wrapper {
+    min-height: 100vh;
+    padding: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Card de Login */
+.login-card {
+    background-color: var(--card-background);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Logo e Título */
+.logo-container {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.login-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: var(--spacing-xs);
+}
+
+.login-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.login-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Formulário */
+.login-form {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-floating > .form-control {
+    padding: 1rem 0.75rem;
+}
+
+.form-floating > label {
+    padding: 1rem 0.75rem;
+}
+
+.btn-login {
+    padding: 0.75rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Footer */
+.login-footer {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--background-color);
+}
+
+/* Alertas */
+.alerts-container {
+    margin-bottom: var(--spacing-md);
+}
+
+.alert {
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .login-card {
+        padding: var(--spacing-lg);
+    }
+
+    .login-logo {
+        width: 100px;
+    }
+
+    .login-title {
+        font-size: 2rem;
+    }
+
+    .login-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-card {
+    animation: fadeIn 0.5s ease-out;
+}

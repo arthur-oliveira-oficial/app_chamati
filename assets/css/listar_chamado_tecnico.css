@@ -1,0 +1,364 @@
+/* Variáveis */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #495057;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --text-color: #212529;
+    --text-muted: #6c757d;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --border-radius: 10px;
+    --shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    --sidebar-width: 250px;
+    --sidebar-width-mobile: 60px;
+}
+
+/* Base - Mobile First */
+body {
+    background-color: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    padding-left: var(--sidebar-width-mobile);
+}
+
+.content-wrapper {
+    position: relative;
+    min-height: 100vh;
+    padding: var(--spacing-xs);
+    transition: padding-left 0.3s;
+    z-index: 1;
+}
+
+/* Container Principal */
+.chamado-form-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 20px;
+}
+
+/* Título */
+.chamado-form-container h2 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.chamado-form-container h2 i {
+    color: var(--primary-color);
+    margin-right: var(--spacing-xs);
+}
+
+/* Card */
+.card {
+    box-shadow: var(--shadow);
+    border: none;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+}
+
+.card-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--spacing-sm);
+}
+
+/* Tabela */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    border-top: none;
+    background-color: var(--bg-color);
+    padding: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.table td {
+    padding: var(--spacing-sm);
+    vertical-align: middle;
+}
+
+/* Botões e Ações */
+.btn {
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: var(--spacing-xs);
+    }
+    
+    body {
+        padding-left: var(--sidebar-width-mobile);
+    }
+
+    .chamado-form-container {
+        padding: 10px;
+    }
+
+    .table-responsive {
+        margin: 0 -10px;
+    }
+
+    .btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    body {
+        padding-left: var(--sidebar-width);
+    }
+
+    .content-wrapper {
+        padding: var(--spacing-md);
+    }
+
+    .chamado-form-container {
+        padding: var(--spacing-lg);
+    }
+
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 1rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.chamado-container {
+    padding: 20px;
+}
+
+.table th {
+    white-space: nowrap;
+}
+
+.badge {
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.4em 0.8em;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+}
+
+.modal-dialog {
+    max-width: 800px;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Grid de Chamados */
+.chamados-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Data Separator */
+.data-separator {
+    grid-column: 1 / -1;
+    margin: 1.5rem 0 1rem;
+    padding: 0.75rem 1rem;
+    color: #495057;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.data-separator {
+    text-transform: none;
+    letter-spacing: normal;
+    border-bottom: none;
+}
+
+/* Card de Chamado */
+.chamado-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.chamado-card:hover {
+    transform: translateY(-2px);
+}
+
+.chamado-card__header {
+    padding: 1rem;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chamado-card__number {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.chamado-card__badges {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.chamado-card__header .badge {
+    padding: 0.4em 0.8em;
+    font-size: 0.75rem;
+    min-width: 70px;
+    font-weight: 500;
+}
+
+.chamado-card__body {
+    padding: 1rem;
+    background: #ffffff;
+}
+
+.chamado-card__info {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.chamado-card__info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2d3436;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.chamado-card__info i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.chamado-card__priority {
+    margin: 0;
+}
+
+.chamado-card__tech {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2d3436;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.5rem;
+}
+
+.chamado-card__tech i {
+    color: var(--primary-color);
+}
+
+.chamado-card__footer {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* No Chamados State */
+.no-chamados {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-color);
+}
+
+.no-chamados i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.no-chamados p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* Responsive Grid */
+@media (min-width: 576px) {
+    .chamados-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .chamados-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .chamados-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.chamado-card__priority .badge {
+    padding: 0.5em 1em;
+    font-weight: 600;
+} 
