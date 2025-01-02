@@ -71,27 +71,15 @@ CHAMATI é um sistema web desenvolvido para gerenciamento de chamados de TI, per
 1. Clone o repositório:
 
 2. Configure o banco de dados:
-3. Importe o arquivo SQL localizado em chamati.sql
+3. Importe o arquivo SQL localizado em docs/implantacao/chamati.sql
 4. Configure as credenciais do banco no arquivo .env
 5. Configure o servidor web:
-   Aponte o DocumentRoot para o diretório do projeto
+   Aponte o DocumentRoot para o diretório do projeto use o docs/implantacao/htaccess_exemplo.txt
    Habilite o mod_rewrite (Apache)
 
 
-📁 Estrutura do Projeto
-
-chamati/
-├── assets/         # Recursos estáticos (CSS, JS, imagens)
-├── controller/     # Controladores MVC
-├── database/       # Configuração do banco de dados
-├── docs/           # Documentação
-├── includes/       # Componentes reutilizáveis
-├── vendor/         # Dependências (Composer)
-└── views/          # Visualizações MVC
-
-
 🤝 Contribuição
-Contribuições são bem-vindas! Por favor, leia o arquivo CONTRIBUTING.md para detalhes sobre nosso código de conduta e o processo de envio de pull requests.
+Contribuições são bem-vindas!
 
 📄 Licença
 Este projeto está sob a licença MIT.
